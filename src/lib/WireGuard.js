@@ -93,7 +93,7 @@ module.exports = class WireGuard {
 # Server
 [Interface]
 PrivateKey = ${config.server.privateKey}
-Address = ${config.server.addressIPv4}/32, ${config.server.addressIPv6}/128
+Address = ${config.server.addressIPv4}/24, ${config.server.addressIPv6}/64
 ListenPort = 51820
 PreUp = ${WG_PRE_UP}
 PostUp = ${WG_POST_UP}
